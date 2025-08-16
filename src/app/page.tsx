@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import AboutUs from "./components/aboutus";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,18 +11,20 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      {/* Background Video */}
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src="/herovid.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <div>
+      {/* Hero Section */}
+      <div className="relative min-h-screen overflow-hidden">
+        {/* Background Video - Only for Hero Section */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/herovid.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       
       {/* Center Hero Text */}
       <div className="absolute inset-0 flex items-center justify-center z-30">
@@ -188,6 +191,10 @@ export default function Home() {
           </div>
         </div>
       </div>
+      </div>
+      
+      {/* About Us Section */}
+      <AboutUs />
     </div>
   );
 }
