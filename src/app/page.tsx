@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import AboutUs from "./components/aboutus";
+import Events from "./components/events";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -195,6 +196,9 @@ export default function Home() {
       
       {/* About Us Section */}
       <AboutUs />
+      
+      {/* Events Section */}
+      <Events />
     </div>
   );
 }
