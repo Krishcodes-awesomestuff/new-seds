@@ -11,18 +11,13 @@ export default function AboutUs() {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           {/* Left - Image */}
           <div className="relative">
-            <div className="w-full h-96 bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-lg shadow-2xl flex items-center justify-center border border-gray-700">
-              <div className="text-center">
-                <Image
-                  src="/logo.png"
-                  alt="SEDS Logo"
-                  width={200}
-                  height={200}
-                  className="w-32 h-32 mx-auto mb-4 drop-shadow-lg"
-                />
-                <p className="text-white/60 text-sm">Add about.png to public folder</p>
-              </div>
-            </div>
+            <Image
+              src="/about.jpg"
+              alt="About SEDS"
+              width={600}
+              height={600}
+              className="w-full h-auto rounded-lg shadow-2xl object-cover"
+            />
           </div>
           
           {/* Right - Content */}

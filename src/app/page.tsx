@@ -3,6 +3,9 @@ import Image from "next/image";
 import { useState } from "react";
 import AboutUs from "./components/aboutus";
 import Events from "./components/events";
+import Team from "./components/team";
+import Contact from "./components/contact";
+import Footer from "./components/footer";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -199,6 +202,15 @@ export default function Home() {
       
       {/* Events Section */}
       <Events />
+      
+      {/* Team Section */}
+      <Team />
+      
+      {/* Contact Section */}
+      <Contact />
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
