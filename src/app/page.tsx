@@ -65,7 +65,7 @@ export default function Home() {
       </div>
       
       {/* Simple Overlay Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 p-6">
+      <nav className="absolute top-0 left-0 right-0 z-50 p-6">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex-shrink-0">

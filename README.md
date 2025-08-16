@@ -8,11 +8,16 @@ A modern, interactive website for the SEDS (Students for the Exploration and Dev
 
 ---
 
-## � Development Documentation
+##  Development Documentation
 
 ### Latest Updates (August 2025)
 
 This README serves as a comprehensive guide for developers continuing work on this project. All recent changes and implementation details are documented below.
+
+#### 🆕 Recent Updates (August 16, 2025)
+- ✅ **Events Section**: Complete event showcase with grid layout
+- ✅ **Navbar Positioning**: Changed from fixed to absolute positioning
+- ✅ **Component Architecture**: Modular design for easy maintenance
 
 ---
 
@@ -29,6 +34,7 @@ This README serves as a comprehensive guide for developers continuing work on th
 
 ### 🧭 Navigation System
 - **Overlay menu design** replacing traditional navbar
+- **Absolute positioning** - navbar stays in hero section only, doesn't follow scroll
 - **Glassmorphism styling** with backdrop blur and transparency
 - **Split-screen layout**: SEDS logo on left, navigation links on right
 - **Smooth slide-in animations** for menu reveal
@@ -46,6 +52,15 @@ This README serves as a comprehensive guide for developers continuing work on th
 - **Lucide React icons**: Eye (Vision), Target (Mission)
 - **Blue accent headings** with underline styling
 - **Professional content layout** with proper spacing
+
+### 🎫 Events Section
+- **Dedicated component** (`src/app/components/events.tsx`)
+- **Grid layout**: 3 cards in first row, 2 cards in second row (centered)
+- **Event card structure**: Name, Place/Date, Description, Action button
+- **Blue "Events" heading** with underline for consistency
+- **Interactive hover effects** and professional styling
+- **Sample events**: Space workshops, astronomy nights, competitions, guest lectures
+- **Responsive design** adapting to different screen sizes
 
 ### 🎨 Design System
 - **Glassmorphism UI** with backdrop blur effects and semi-transparent elements
@@ -89,10 +104,11 @@ seds/
 ├── src/
 │   └── app/
 │       ├── components/
-│       │   └── aboutus.tsx    # About Us section component
+│       │   ├── aboutus.tsx    # About Us section component
+│       │   └── events.tsx     # Events section component
 │       ├── globals.css        # Global styles & Tailwind imports
 │       ├── layout.tsx         # Root layout with Arsenal font config
-│       └── page.tsx           # Main homepage (Hero + About sections)
+│       └── page.tsx           # Main homepage (Hero + About + Events sections)
 ├── eslint.config.mjs     # ESLint configuration
 ├── next.config.ts        # Next.js configuration
 ├── package.json          # Project dependencies
@@ -117,6 +133,8 @@ seds/
 2. **Navigation Evolution** ✅
    - Started with complex glassmorphism navbar
    - Simplified to overlay menu based on user feedback
+   - **Changed positioning from fixed to absolute** (August 16, 2025)
+   - Navbar now stays in hero section only, doesn't follow scroll
    - Implemented smooth slide animations
    - Added social media links integration
 
@@ -126,17 +144,31 @@ seds/
    - Implemented grid layout with content structure
    - Added black background isolation from hero video
 
-4. **Code Structure Optimization** ✅
+4. **Events Section Implementation** ✅ (August 16, 2025)
+   - Created `events.tsx` component with grid layout
+   - Implemented 3-2 card layout (3 cards first row, 2 cards second row)
+   - Added event card structure: Name, Place/Date, Description
+   - Blue heading with underline for design consistency
+   - Integrated with main page layout
+
+5. **Code Structure Optimization** ✅
    - Separated hero section from content sections
    - Modularized components for maintainability
    - Updated page structure for multi-section layout
 
 ### Current Development Status
 
-- ✅ **Hero Section**: Complete with video, branding, navigation
+- ✅ **Hero Section**: Complete with video, branding, navigation (absolute positioning)
 - ✅ **About Us Section**: Component created, needs `about.png` image
+- ✅ **Events Section**: Complete with grid layout and sample events
 - 🔄 **Missing Assets**: Add `about.png` to public folder
-- 📋 **Future Sections**: Events, Team, Contact pages
+- 📋 **Future Sections**: Team, Contact pages
+
+### Navigation Behavior Update (August 16, 2025)
+- **Previous**: Fixed navbar that followed scroll
+- **Current**: Absolute positioned navbar confined to hero section
+- **User Experience**: Clean content viewing without navbar obstruction
+- **Implementation**: Changed `className="fixed"` to `className="absolute"`
 
 ---
 
@@ -197,12 +229,15 @@ export default function Home() {
       {/* Hero Section with Video Background */}
       <section className="relative h-screen overflow-hidden">
         <video /> {/* Background video */}
-        <div />  {/* Overlay navigation */}
+        <nav />  {/* Absolute positioned overlay navigation */}
         <div />  {/* Centered SEDS branding */}
       </section>
       
       {/* About Us Section */}
       <AboutUs />
+      
+      {/* Events Section */}
+      <Events />
     </main>
   );
 }
@@ -216,6 +251,26 @@ export default function AboutUs() {
   return (
     <section className="bg-black text-white py-20">
       {/* Grid Layout: Image + Content */}
+      {/* Vision & Mission Cards with Icons */}
+    </section>
+  );
+}
+```
+
+### Events Component (`src/app/components/events.tsx`)
+```tsx
+export default function Events() {
+  const events = [/* 5 sample events */];
+  
+  return (
+    <section className="bg-black text-white py-20">
+      {/* Blue "Events" heading with underline */}
+      {/* Grid: 3 cards first row, 2 cards second row */}
+      {/* Card structure: Name, Place/Date, Description, Button */}
+    </section>
+  );
+}
+```
       {/* Vision & Mission Cards with Icons */}
     </section>
   );
@@ -498,8 +553,10 @@ For questions about the organization:
 
 ### Version History
 - **v1.0** (August 2025): Initial hero section with video background
-- **v1.1** (August 2025): Added overlay navigation system
+- **v1.1** (August 2025): Added overlay navigation system  
 - **v1.2** (August 2025): Implemented About Us section with icons
+- **v1.3** (August 16, 2025): Added Events section with grid layout
+- **v1.4** (August 16, 2025): Changed navbar to absolute positioning
 - **Current**: Multi-section layout with modular components
 
 ### License & Usage
@@ -522,19 +579,36 @@ This project is developed for SEDS - REC and is intended for educational and org
 
 ## 🔄 Change Log
 
-### August 16, 2025
+### August 16, 2025 - Latest Updates
 - ✅ **Hero Section**: Implemented full-screen video background with `herovid.mp4`
 - ✅ **Navigation**: Created glassmorphism overlay menu system
+- ✅ **Navigation Update**: Changed positioning from fixed to absolute (navbar stays in hero only)
 - ✅ **Typography**: Integrated Arsenal font from Google Fonts
 - ✅ **Branding**: Added centered SEDS - REC branding with scroll indicator
 - ✅ **About Us**: Created dedicated component with Vision/Mission cards
+- ✅ **Events Section**: Implemented complete events showcase with grid layout
 - ✅ **Dependencies**: Installed lucide-react for iconography
 - ✅ **Structure**: Organized components for maintainable architecture
 - 📋 **Documentation**: Comprehensive README update for future developers
 
+### Events Section Details (August 16, 2025)
+- **Component**: `src/app/components/events.tsx`
+- **Layout**: 3 cards in first row, 2 cards in second row (centered)
+- **Card Structure**: Event name, place/date, description, action button
+- **Sample Events**: 5 space-related events with realistic details
+- **Styling**: Blue headings with underlines, hover effects, responsive design
+- **Integration**: Seamlessly added to main page after About Us section
+
+### Navigation Positioning Update (August 16, 2025)
+- **Change**: Modified navbar from `fixed` to `absolute` positioning
+- **Behavior**: Logo and hamburger menu now confined to hero section
+- **User Experience**: Clean scrolling without navigation obstruction
+- **Technical**: Simple className change for improved UX
+
 ### Development Notes
 - Video background isolated to hero section only
 - About Us section uses black background for content distinction
+- Events section follows same black background pattern
 - Placeholder system implemented for missing about.png image
 - Responsive design implemented across all components
 - TypeScript strict mode enabled for code quality
