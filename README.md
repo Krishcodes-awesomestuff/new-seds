@@ -4,11 +4,9 @@
 
 A modern, interactive website for the SEDS (Students for the Exploration and Development of Space) chapter at Rajalakshmi Engineering College.
 
-![SEDS Logo](public/logo.png)
-
 ---
 
-## � Development Documentation
+## Development Documentation
 
 ### Latest Updates (August 2025)
 
@@ -16,7 +14,7 @@ This README serves as a comprehensive guide for developers continuing work on th
 
 ---
 
-## �🚀 Current Features
+## Current Features
 
 ### 🎬 Hero Section
 - **Full-screen background video** (`herovid.mp4`) with autoplay and loop
