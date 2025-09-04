@@ -37,7 +37,7 @@ export default function Home() {
             SEDS - REC
           </h1>
           <p className="text-white/90 text-xl md:text-2xl font-light tracking-widest drop-shadow-lg" style={{fontFamily: 'var(--font-arsenal)'}}>
-            Students for the Exploration and Development of Space
+            Students for the Exploration and Development of Spaces
           </p>
         </div>
       </div>
