@@ -198,16 +198,21 @@ export default function Home() {
       </div>
       
       {/* About Us Section */}
+      <div id = "about">
       <AboutUs />
-      
+      </div>
+      <div id = "events">
       {/* Events Section */}
       <Events />
-      
+      </div>
+      <div id = "team">
       {/* Team Section */}
       <Team />
-      
+      </div>
+      <div id = "contact">
       {/* Contact Section */}
       <Contact />
+      </div>
       
       {/* Footer */}
       <Footer />
