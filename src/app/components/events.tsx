@@ -31,7 +31,7 @@ export default function Events() {
       name: "Guest Lecture: ISRO Scientist",
       place: "Main Hall",
       date: "Nov 2, 2025",
-      description: "Inspiring talk by ISRO scientist about current space missions and career opportunities."
+      description: "Inspiring talk by ISRO scientist about current space missions and career opportunities.."
     }
   ];
 
