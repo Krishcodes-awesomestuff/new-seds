@@ -116,7 +116,7 @@ export default function Home() {
                 className="h-32 w-auto mx-auto drop-shadow-2xl"
               />
               
-              <p className="text-white/70 text-sm mt-2">Students for the Exploration and Development of Space</p>
+              <p className="text-white/70 text-sm mt-2">Students for the Exploration and Development of Space.</p>
             </div>
           </div>
           
