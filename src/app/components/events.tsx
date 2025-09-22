@@ -4,33 +4,33 @@ export default function Events() {
   // Sample event data - replace with actual events
   const events = [
     {
-      name: "Space Technology Workshop",
+      name: "Space Software Workshop",
       place: "REC Auditorium",
-      date: "Sep 15, 2025",
-      description: "Hands-on workshop exploring cutting-edge space technologies and satellite systems."
+      date: "Sep 26, 2025",
+      description: "Don’t miss this chance to explore powerful space & engineering software tools!"
     },
     {
       name: "Astronomy Night",
       place: "REC Terrace",
-      date: "Sep 22, 2025",
+      date: "UPCOMING",
       description: "Stargazing event with telescopes and expert guidance on celestial observations."
     },
     {
       name: "Mars Mission Simulation",
       place: "Computer Lab",
-      date: "Oct 5, 2025",
+      date: "UPCOMING",
       description: "Interactive simulation of Mars exploration missions and space habitat design."
     },
     {
       name: "Rocket Building Competition",
       place: "REC Ground",
-      date: "Oct 18, 2025",
+      date: "UPCOMING",
       description: "Design and launch model rockets in this exciting engineering competition."
     },
     {
       name: "Guest Lecture: ISRO Scientist",
       place: "Main Hall",
-      date: "Nov 2, 2025",
+      date: "UPCOMING",
       description: "Inspiring talk by ISRO scientist about current space missions and career opportunities."
     }
   ];
@@ -79,10 +79,26 @@ export default function Events() {
               </p>
 
               {/* Register Button */}
-              <div className="mt-6">
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors duration-300 font-medium">
+              <div className="mt-4">
+                <a
+                  href="https://docs.google.com/forms/d/15ifCeYvSLBvUN4G6S1yON_MoiN6G5Ly54taYTYmheSc/edit?ts=68cd58f8#responses"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300"
+                >
                   Learn More
-                </button>
+                  <svg 
+                    className="ml-2 -mr-1 w-4 h-4" 
+                    fill="currentColor" 
+                    viewBox="0 0 20 20"
+                  >
+                    <path 
+                      fillRule="evenodd" 
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" 
+                      clipRule="evenodd" 
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
           ))}
